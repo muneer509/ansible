@@ -6,3 +6,8 @@
     ansible.builtin.package: # here ansible is heterozinous so it will dicribe the package and install nginx based on package
       name: nginx
       state: present
+  - name: start nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
