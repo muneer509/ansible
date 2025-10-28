@@ -1,0 +1,11 @@
+- name: variable using prompt as intupts
+  hosts: web
+  vars_prompt:
+  - name: COURSE
+    prompt: Please enter the course name
+  - name: MODULE
+    prompt: PLease enter he module name
+  tasks: 
+  - name: print course info
+    ansible.bultin.debug:
+      msg: "I am learning {{COURSE}} with {{MODULE}}"
