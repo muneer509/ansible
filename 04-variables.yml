@@ -1,6 +1,10 @@
 - name: variables
   hosts: web
+  vars:
+    COURSE: "DEVOPS with AWS"
+    NAME: "Muneer"
+
   tasks:
   - name: print the info
     ansible.builtin.debug:
-      msg: "Muneer is learning DEVOPS with ansible"
+      msg: "{{NAME}} is learning {{COURSE}} with ansible"
