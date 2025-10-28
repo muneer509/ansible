@@ -5,4 +5,4 @@
   tasks:
   - name: print course indo
     ansible.builtin.debug:
-      mgs: " I am learning {{COURSE}} with {{MODULE}}"
+      msg: " I am learning {{COURSE}} with {{MODULE}}"
