@@ -5,6 +5,8 @@
     NAME: "Muneer"
 
   tasks:
-  - name: print the info
+   - name: print the info
+  vars: 
+    COURSE: "DEVOPS"
     ansible.builtin.debug:
       msg: "{{NAME}} is learning {{COURSE}} with ansible"
