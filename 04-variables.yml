@@ -1,7 +1,7 @@
 - name: variables
   hosts: web
   vars:
-    COURSE: "DEVOPS with AWS"
+    COURSE: "DEVOPS with AZURE"
     NAME: "Muneer"
 
   tasks:
