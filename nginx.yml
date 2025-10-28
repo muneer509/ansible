@@ -1,7 +1,8 @@
 - name: nginx installation and running
   hosts: web
+  become: yes # it will run with sudo access
   tasks: 
   - name: install nginx
     ansible.builtin.package: # here ansible is heterozinous so it will dicribe the package and install nginx based on package
-    name: nginx
-    state: present
+      name: nginx
+      state: present
