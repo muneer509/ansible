@@ -1,0 +1,6 @@
+- name: variables
+  hosts: web
+  tasks:
+  - name: print the info
+    ansible.builtin.debug:
+      msg: "Muneer is learning DEVOPS with ansible"
