@@ -3,9 +3,9 @@
   become: yes
   tasks:
   - name: checking expense user exists or not
-    ansible..builtin.command:
+    ansible..builtin.command: id expense
     register: USER # user is variable we are storing the output of above line
   
   - name: print the user info
     ansible.builtin.debug:
-    msg: " User info: {{ USER }}"
+      msg: " User info: {{ USER }}"
