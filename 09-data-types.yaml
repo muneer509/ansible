@@ -1,6 +1,7 @@
 - name: devops course info
   hosts: local
   connection: local
+  become: yes
   vars: 
     course: "DEVOPS with AWS"
     duration: 120
