@@ -1,11 +1,28 @@
-- name: expense user creation
+# - name: expense user creation
+#   hosts: web
+#   become: yes
+#   tasks:
+#   - name: checking expense user exists or not
+#     ansible..builtin.command: id expense
+#     register: USER # user is variable we are storing the output of above line
+  
+#   - name: print the user info
+#     ansible.builtin.debug:
+#       msg: " User info: {{ USER }}"
+
+- name: create user
   hosts: web
   become: yes
   tasks:
-  - name: checking expense user exists or not
-    ansible..builtin.command: id expense
-    register: USER # user is variable we are storing the output of above line
-  
-  - name: print the user info
+  - name: check user exist or not
+    ansible.builtin.command: id expense
+    register: USER #here USER is a variable that gets output from above command
+    ignore_errors: True
+
+  - name: print the user information
     ansible.builtin.debug:
-      msg: " User info: {{ USER }}"
+      msg: "user info: {{ USER }}"
+
+  # - name: create user
+  #   ansible.builtin.command: useradd expense
+  #   when: USER.rc != 0
