@@ -7,10 +7,14 @@
       msg: "Hello {{ COURSE | default('Ansible') }}"
       msg: "Hello {{ Name | default('Muneer') }}"
 
-# - name: demo on filters/functions
-#   hosts: local
-#   connection: local
-#   tasks:
-#   - name: print the default variable
-#     ansible.builtin.debug:
-#       msg: "Hello {{ course | default('Ansible') }}"
+- name: convert to upparcase
+  vars:
+    greeting: "Hello Muneer"
+  ansible.builtin.debug:
+    msg: "{{ greeting | upper }}"
+
+- name: lower case
+  vars:
+    greeting: " Hello Muneer"
+  ansible.builtin.debug:
+    msg: "{{ greeting | lower }}"
