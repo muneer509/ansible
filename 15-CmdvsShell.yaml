@@ -2,6 +2,6 @@
   hosts: local
   connection: local
   tasks:
-  - ame: execute cmd and shell in ansible
+  - name: ute cmd and shell in ansible
     # ansible.builtin.command: ls -ltr > /tmp/output.txt
     ansible.builtin.shell: ls -ltr > /tmp/output.txt 
