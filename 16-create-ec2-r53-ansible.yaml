@@ -14,7 +14,7 @@
   tasks:
     - name: create ec2
       amazon.aws.ec2_instance:
-        name: "{{ item }}"
+        name: "{{item}}"
         vpc_subnet_id: "{{ subnet-id }}"
         instance_type: "{{ type }}"
         image_id: "{{ ami_id }}"
