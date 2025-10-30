@@ -1,0 +1,21 @@
+- name: creating ec2 and updtaing r53
+  hosts: local
+  connection: local
+  vars:
+    subnet-id: subnet-0539f15784b4ea646
+    sg_id: sg-0670763c62c77ba9b
+    ami_id: ami-09c813fb71547fc4f
+    type: t3.micro
+    instances:
+    - myql
+    - backend
+    - frontend
+  tasks:
+  - name: create ec2
+    amazon.aws.ec2_instance:
+      name: "{{ item }}"
+      vpc_subnet_id: "{{ subnet-id }}"
+      instance_type: "{{ type }}"
+      image_id: "{{ ami_id }}"
+    loop: "{{ instances }}"
+    register: ec2_instances
