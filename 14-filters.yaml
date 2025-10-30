@@ -5,6 +5,7 @@
   - name: Print the default variable
     ansible.builtin.debug:
       msg: "Hello {{ COURSE | default('Ansible') }}"
+      msg: "Hello {{ Name | default('Muneer') }}"
 
 # - name: demo on filters/functions
 #   hosts: local
