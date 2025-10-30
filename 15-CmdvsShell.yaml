@@ -2,10 +2,6 @@
   hosts: local
   connection: local
   tasks:
-  - name: execute cmd and shell in ansible
+  - ame: execute cmd and shell in ansible
     # ansible.builtin.command: ls -ltr > /tmp/output.txt
-    ansible.builtin.shell: ls -ltr > /tmp/output.txt
-  - name: List only .log files
-    ansible.builtin.shell:
-    cmd: ls -l /var/log | grep ".log"
-    
+    ansible.builtin.shell: ls -ltr > /tmp/output.txt 
