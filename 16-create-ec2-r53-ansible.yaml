@@ -21,12 +21,11 @@
         image_id: "{{ ami_id }}"
       loop: "{{ instances }}"
       register: ec2_instances
-
     - name: print output
       ansible.builtin.debug:
         msg: "{{ ec2_instances }}"
     - name: create r53 records
-      amazon.aws.route53:
+      amazon.aws.route53: null
       state: present
       zone: "{{ zone }}"
       record: "{{ item.item }}.{{ zone }}"
@@ -35,7 +34,4 @@
       value: "{{ item.instances[0].private_ip_address }}"
       wait: true
       override: true
-
       loop: "{{ ec2_instances.results }}"
-
-
