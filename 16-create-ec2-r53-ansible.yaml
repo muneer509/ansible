@@ -3,7 +3,7 @@
   hosts: local
   connection: local
   vars:
-    subnet-id: subnet-0539f15784b4ea646
+    subnet_id: subnet-0539f15784b4ea646
     sg_id: sg-0670763c62c77ba9b
     ami_id: ami-09c813fb71547fc4f
     type: t3.micro
