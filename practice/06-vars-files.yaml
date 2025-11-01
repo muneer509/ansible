@@ -1,0 +1,9 @@
+- name: variable from vars_files
+  hosts: local
+  connection: local
+  vars_files:
+  - vars.yaml
+  tasks: nginx install
+  ansible.builtin.package:
+    name: {{package}}
+    state: remove
