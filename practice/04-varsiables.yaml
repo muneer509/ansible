@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    Name: Muneer
+    Name: "Muneer"
     Age: 33
   tasks:
     ansible.builtin.debug:
