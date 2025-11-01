@@ -26,4 +26,4 @@
   tasks:
   - 
     ansible.builtin.debug:
-      msg: "{{course}}, {{ duration }}, {{ topics }},{{ live }}, {{ tools }}"
+      msg: "{{course}}, {{ duration }}, {{ topics }},{{ Paid }}, {{ tools }}"
