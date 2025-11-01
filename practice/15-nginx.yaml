@@ -1,0 +1,24 @@
+- name: installation based on distro
+  hosts: localhost
+  connection: local
+  become: yes
+
+  tasks:
+  - name: ditro info
+    ansible.builtin.debug:
+      msg: "{{ ansible_facts }}"
+
+  tasks:
+  - name: redhat
+    ansible.builtin.dnf:
+      name: nginx
+      state: present
+    when: ansible_os_familiy == "RedHat"
+  
+
+  tasks:
+  - name: apt
+    ansible.builtin.apt:
+      name: nginx
+      state: present
+    when: ansible_os_familiy == "Ubuntu"
