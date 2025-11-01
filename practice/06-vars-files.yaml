@@ -8,5 +8,5 @@
   tasks:
   - 
     ansible.builtin.package:
-      name: nginx
-      state: absent
+      name: "{{package}}"
+      state: present
