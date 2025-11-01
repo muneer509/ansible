@@ -5,5 +5,5 @@
   - vars.yaml
   tasks: nginx install
   ansible.builtin.package:
-    name: {{package}}
+    name: "{{package}}"
     state: remove
