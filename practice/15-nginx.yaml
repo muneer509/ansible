@@ -13,7 +13,7 @@
     ansible.builtin.dnf:
       name: nginx
       state: present
-    when: distribution == "RedHat"
+    when: ansible_facts['distribution'] == "RedHat"
   
 
   tasks:
@@ -21,4 +21,4 @@
     ansible.builtin.apt:
       name: nginx
       state: present
-    when: distribution == "Ubuntu"
+    when: ansible_facts['distribution'] == "Ubuntu"
