@@ -1,0 +1,15 @@
+- name: variables
+  hosts: local
+  connection: local
+  vars:
+    NAME: "Muneer"
+    Age: 32
+  tasks:
+  -
+    ansible.builtin.debug:
+      msg: " {{Name}} and {{Age}}"
+  - name: task-level- vars
+    vars: 
+      Name: "Shaik"
+    ansible.builtin.debug:
+      msg: "{{Name}} {{Age}}"
