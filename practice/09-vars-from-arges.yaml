@@ -7,4 +7,4 @@
   - name: vars as a arguments
     ansible.builtin.package:
       name: "{{package}}"
-      state: present 
+      state: "{{state}}"
