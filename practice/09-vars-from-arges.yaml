@@ -1,0 +1,10 @@
+- name: vars as a arguments
+  hosts: localhost
+  connection: local
+  become: yes
+
+  tasks:
+  - name: vars as a arguments
+    ansible.builtin.package:
+      name: "{{package}}"
+      state: "{{present}}"
