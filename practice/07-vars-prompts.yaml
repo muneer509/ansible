@@ -1,0 +1,15 @@
+- name: vars_prompt
+  hosts: localhost
+  connection: local
+  vars_prompt:
+  - name: package
+    prompt: enter the package name
+  - name: state
+    prompt: Do you want to install(present) or remove(absent)?
+  
+
+  tasks:
+  -
+    ansible.builtin.package:
+      - name: "{{package}}"
+        state: "{{state}}"
