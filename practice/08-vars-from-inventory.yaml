@@ -1,0 +1,10 @@
+- name: vars from inventory
+  hosts: localhost
+  connection: local
+  become: yes
+
+  tasks:
+  - 
+    ansible.builtin.package:
+      name: "{{package}}"
+      state: "{{state}}"
