@@ -1,0 +1,29 @@
+- name: datat types
+  hosts: localhost
+  connection: local
+  vars:
+    course: "DEVOPS with AWS"
+    duration: 120
+    topics:
+    - Linux
+    - Shell
+    - ansible
+    - terraform
+    - docker and K8s
+    - AWS
+    Paid: true
+    tools:
+      cloud: AWS
+      CM: ansible
+      IAC: terraform
+      aws:
+      - ec2
+      - alb
+      - IAM
+      - S3
+
+
+  tasks:
+  - 
+    ansible.builtin.debug:
+      msg: "{{course}}, {{ duration }}, {{ topics }},{{ live }}, {{ tools }}"
