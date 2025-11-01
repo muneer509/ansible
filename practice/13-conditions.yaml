@@ -1,0 +1,15 @@
+- name: ceating user using ansible
+  hosts: localhost
+  connection: local
+  become: yes
+
+  tasks: 
+  - name: create user
+    ansible.builtin.command: id expense
+    register: USER 
+    ignore_errors: True 
+  
+  - name: print user 
+    ansible.builtin.debug:
+      msg: " User name:{{ USER }}"
+    
