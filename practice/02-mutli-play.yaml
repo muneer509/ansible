@@ -11,7 +11,7 @@
   
 - name: PLAY-2
   hosts: local
-  connections: local
+  connection: local
   tasks: 
   - name: PLAY-02 TASK-01
     ansible.builtin.debug:
