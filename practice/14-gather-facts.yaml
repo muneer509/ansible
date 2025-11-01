@@ -1,0 +1,8 @@
+- name: gether facts
+  hosts: localhost
+  connection: local
+
+  taks:
+  - name: gethering facts
+    ansible.builtin.debug:
+      msg: "{{ ansible_facts}}"
