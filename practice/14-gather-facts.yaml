@@ -2,7 +2,7 @@
   hosts: localhost
   connection: local
 
-  taks:
+  tasks:
   - name: gethering facts
     ansible.builtin.debug:
       msg: "{{ ansible_facts}}"
