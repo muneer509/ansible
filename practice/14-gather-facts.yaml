@@ -1,6 +1,5 @@
 - name: gether facts
-  hosts: localhost
-  connection: local
+  hosts: 10.0.2.37
 
   tasks:
   - name: gethering facts
