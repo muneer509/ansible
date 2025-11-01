@@ -1,1 +1,4 @@
-package: "nginx"
+package:
+- nginx
+- mysql-server
+- tmux
