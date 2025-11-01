@@ -9,7 +9,7 @@
   
 
   tasks:
-  -
+  - name: manage package based on user input
     ansible.builtin.package:
-      - name: "{{package}}"
-        state: "{{state}}"
+      name: "{{ package }}"
+      state: "{{ state }}"
